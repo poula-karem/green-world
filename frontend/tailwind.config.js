@@ -9,6 +9,7 @@ export default {
       colors: {
         lightGreen: "#f0f7f0",
         paleGreen: "#e8f5e9",
+        darkGreen: "#1b5e20",
       },
       fontFamily: {
         sans: ["Lora", "sans-serif"],
