@@ -26,6 +26,7 @@ export default function Features() {
         Discover 3 Intriguing Reasons to Choose Green World
       </h2>
       <motion.div
+        ref={containerRef}
         className="features-container flex flex-row justify-center gap-[4rem] max-md:flex-col max-md:items-center"
         variants={containerVariants}
         initial="hidden"
@@ -36,7 +37,6 @@ export default function Features() {
             key={feature.id}
             className="feature-card flex flex-col items-center max-w-[300px] rounded-full"
             variants={cardVariants}
-            ref={containerRef}
           >
             <div
               className="feature-card-img p-1 rounded-[50%] w-[200px] h-[200px] border-[4px] border-dashed border-[#43a047]
