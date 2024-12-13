@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HamburgerMenu, { HamburgerButton } from "./HamburgerMenu";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [active, setActive] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,12 +23,14 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-4 ">
             <button
+              onClick={() => navigate("login")}
               className="text-center text-[1rem] cursor-pointer font-medium text-[#43a047] px-4 py-2 border-[2px] 
           border-[#43a047] rounded-full transition-all hover:bg-[#43a0471a] hover:scale-105 max-sm:hidden"
             >
               Login
             </button>
             <button
+              onClick={() => navigate("signup")}
               className="text-center text-[1rem] cursor-pointer font-medium text-white border-[2px] border-[#43a047] bg-[#43a047] px-4 py-2
           rounded-full transition-all hover:bg-[#2e7d32] hover:scale-105 hover:border-[#2e7d32] max-sm:hidden"
             >

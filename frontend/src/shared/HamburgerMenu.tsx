@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   HamburgerButtonProps,
   HamburgerMenuProps,
@@ -39,6 +39,7 @@ export const HamburgerButton = ({
 };
 
 const HamburgerMenu = ({ isOpen, active, setActive }: HamburgerMenuProps) => {
+  const navigate = useNavigate();
   return (
     <motion.div
       className="overflow-hidden bg-white  flex flex-col items-center sm:hidden"
@@ -77,12 +78,14 @@ const HamburgerMenu = ({ isOpen, active, setActive }: HamburgerMenuProps) => {
       </ul>
       <div className="flex items-center gap-4 mt-5 pb-5">
         <button
+          onClick={() => navigate("login")}
           className="text-center text-[1rem] cursor-pointer font-medium text-[#43a047] px-3 py-2 border-[2px] 
           border-[#43a047] rounded-full transition-all hover:bg-[#43a0471a] hover:scale-105"
         >
           Login
         </button>
         <button
+          onClick={() => navigate("signup")}
           className="text-center text-[1rem] cursor-pointer font-medium text-white border-[2px] border-[#43a047] bg-[#43a047] px-3 py-2
           rounded-full transition-all hover:bg-[#2e7d32] hover:scale-105 hover:border-[#2e7d32]"
         >
