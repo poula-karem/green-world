@@ -23,6 +23,10 @@ export default {
       animation: {
         float: "float 5s ease-in-out infinite",
       },
+      backgroundImage: {
+        "gradient-to-br":
+          "linear-gradient(to bottom right, var(--tw-gradient-stops))",
+      },
     },
   },
   plugins: [],

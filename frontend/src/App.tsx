@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import MasterLayout from "./layouts/MasterLayout";
+import AuthLayout from "./layouts/AuthLayout";
+import AuthPage from "./pages/AuthPage/AuthPage";
 
 const routes = createBrowserRouter([
   {
@@ -14,6 +16,16 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       { path: "home", element: <Home /> },
+    ],
+  },
+  {
+    path: "/",
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "/:mode",
+        element: <AuthPage />,
+      },
     ],
   },
 ]);

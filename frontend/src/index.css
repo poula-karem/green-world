@@ -41,6 +41,17 @@ body {
   object-fit: cover;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
 @media (min-width: 768px) {
   .hero-plant-image {
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
