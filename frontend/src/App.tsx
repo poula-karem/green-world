@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import Home from "./pages/Home/Home";
 import MasterLayout from "./layouts/MasterLayout";
 import AuthLayout from "./layouts/AuthLayout";
@@ -11,11 +15,13 @@ const routes = createBrowserRouter([
 
     children: [
       {
-        index: true,
-        path: "/",
+        path: "/home",
         element: <Home />,
       },
-      { path: "home", element: <Home /> },
+      {
+        index: true, // Matches the default path "/"
+        element: <Navigate to="/home" replace />,
+      },
     ],
   },
   {
