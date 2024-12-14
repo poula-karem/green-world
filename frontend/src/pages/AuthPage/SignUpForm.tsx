@@ -8,7 +8,7 @@ export default function SignUpForm() {
       <h1 className="text-4xl font-semibold">Sign up</h1>
 
       <form className="flex flex-col gap-5 mt-8">
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 max-sm:flex-col">
           <div className="flex flex-col gap-1 grow">
             <label className="font-medium" htmlFor="firstname">
               First Name
@@ -34,7 +34,7 @@ export default function SignUpForm() {
             />
           </div>
         </div>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 max-sm:flex-col">
           <div className="flex flex-col gap-1 basis-1/2">
             <label className="font-medium" htmlFor="age">
               Age
@@ -121,12 +121,12 @@ export default function SignUpForm() {
           />
         </div>
         <button
-          className="w-full py-[10px] mt-4 bg-green-500 hover:bg-green-600 text-white text-lg font-medium rounded-md shadow-md transition-all duration-200 ease-in-out"
+          className="w-full py-[10px] sm mt-4 bg-green-500 hover:bg-green-600 text-white text-lg font-medium rounded-md shadow-md transition-all duration-200 ease-in-out"
           type="submit"
         >
           Sign up
         </button>
-        <div className="flex flex-row justify-center gap-2 font-medium">
+        <div className="flex flex-row justify-center flex-wrap gap-2 font-medium ">
           <span className="text-base">Already have an account?</span>
           <button className="w-fit text-green-600" type="button">
             Sign in
